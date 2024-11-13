@@ -1,15 +1,9 @@
-$corPrincipal: rgb(231, 231, 58);
-$corTexto: black;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-}
+@use "config/cores";
+@use "config/reset";
+@use "secoes/produtos";
 
 body {
-  background-color: $corPrincipal;
+  background-color: cores.$corPrincipal;
 }
 
 li {
@@ -23,7 +17,7 @@ li {
 }
 
 header {
-  background-color: #641641;
+  background-color: cores.$corFundo;
   position: sticky;
   top: 0;
   left: 0;
@@ -46,41 +40,12 @@ header .container {
 }
 
 .menu li a {
-  color: $corTexto;
+  color: cores.$corTexto;
   text-decoration: none;
 }
 
 section {
   padding: 56px 0;
-}
-
-.products {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 32.66%);
-  column-gap: 1%;
-  row-gap: 4%;
-  width: 100%;
-}
-
-.product-item img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.product-button {
-  display: block;
-  background-color: #44bd32;
-  color: #fff;
-  text-align: center;
-  padding: 8px 0;
-  border-radius: 8px;
-  margin-top: 8px;
-  text-decoration: none;
-}
-
-.product-button:hover {
-  background-color: #4cd137;
 }
 
 @media screen and (max-width: 1023px) {
